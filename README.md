@@ -18,7 +18,6 @@ scripts/                 Data preparation, training, evaluation, and analysis en
 src/edcr/                Reusable Python package
 tests/                   Unit and protocol-regression tests
 experiment_registry.jsonl  Chronological experiment registry
-实验执行方案.md             Canonical research execution protocol
 ```
 
 ## Installation
