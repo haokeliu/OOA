@@ -9,8 +9,6 @@ protocol documents, and lightweight configuration needed to reproduce the code p
 > submission packages are intentionally not included. See [DATA.md](DATA.md) for the expected local
 > layout and redistribution boundaries.
 
-中文说明见 [README.zh-CN.md](README.zh-CN.md)。
-
 ## Repository layout
 
 ```text
@@ -74,7 +72,7 @@ COCO_ROOT/
 ```
 
 The experiment series is cumulative and contains sealed-evaluation constraints. Before running
-later-stage scripts, read [`实验执行方案.md`](实验执行方案.md), the relevant preregistration under
+later-stage scripts, the relevant preregistration under
 `docs/`, and `experiment_registry.jsonl`. In particular, do not use sealed evaluation labels for
 model fitting or hyperparameter selection.
 
