@@ -1,0 +1,38 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "edcr"
+version = "0.1.0"
+description = "Evidence-dependent context reliance experiments for multi-label recognition"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11,<3.15"
+dependencies = [
+  "matplotlib>=3.9",
+  "numpy>=2.1",
+  "pillow>=11.0",
+  "pycocotools>=2.0.8",
+  "pyyaml>=6.0.2",
+  "scipy>=1.14",
+  "scikit-learn>=1.5",
+  "torch>=2.6",
+  "torchvision>=0.21",
+  "open-clip-torch>=2.31",
+  "opencv-python-headless>=4.11",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3", "ruff>=0.9"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/edcr"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

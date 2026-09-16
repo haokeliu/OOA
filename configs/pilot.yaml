@@ -1,0 +1,57 @@
+{
+  "project": "edcr",
+  "protocol_version": "v1",
+  "data": {
+    "dataset": "coco2017",
+    "root": "REQUIRED_DATA_ROOT",
+    "split_seed": 20260909,
+    "splits": [0.70, 0.15, 0.075, 0.075],
+    "test_split": "official_val2017",
+    "pair_count": 5,
+    "sources_per_target": 1,
+    "max_overlap_ratio": 0.05,
+    "max_single_edit_area_ratio": 0.08,
+    "max_combined_edit_area_ratio": 0.16
+  },
+  "features": {
+    "backbone": "ViT-B-16",
+    "checkpoint": "openai",
+    "checkpoint_sha256": "5806e77cd80f8b59890b7e101eabd078d9fb84e6937f9e85e4ecb61988df416f",
+    "frozen": true,
+    "views": "full_and_four_corners",
+    "crop_ratio": 0.6,
+    "pooling_temperature": 1.0
+  },
+  "training": {
+    "seeds": [17, 29, 43],
+    "optimizer": "adamw",
+    "heads_lr": 0.001,
+    "gate_lr": 0.001,
+    "weight_decay": 0.0001,
+    "head_epochs": 20,
+    "gate_epochs": 20,
+    "patience": 5,
+    "cached_batch_size": 256,
+    "gate_hidden": 32,
+    "residual_bound": 2.0,
+    "gate_mode": "soft_constrained",
+    "negative_risk_ratio": 0.95,
+    "weak_risk_slack": 0.01,
+    "dual_lr": 0.01,
+    "weak_delta_epsilon": 0.0001,
+    "original_weight": 0.5
+  },
+  "evaluation": {
+    "calibration_recall": 0.8,
+    "min_calibration_positives": 30,
+    "weak_small_area_pixels": 1024,
+    "weak_max_area_ratio": 0.02,
+    "bootstrap_repeats": 2000
+  },
+  "execution": {
+    "phase": "pilot",
+    "allow_paid_services": false,
+    "device": "auto",
+    "feature_microbatch": "auto_profile"
+  }
+}

@@ -1,0 +1,39 @@
+.DS_Store
+.idea/
+.vscode/
+.pytest_cache/
+.ruff_cache/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Datasets, derived manifests, weights, caches, and generated results
+data/
+runs/
+reports/
+output/
+paper/
+tmp/
+*.npz
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.pkl
+*.pickle
+*.joblib
+
+# Download fragments and local logs
+*.part
+*.log
