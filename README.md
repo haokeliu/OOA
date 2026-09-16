@@ -1,6 +1,6 @@
-# EDCR
+# OOA
 
-EDCR (Evidence-Dependent Context Reliance) is a research codebase for studying when an
+OOA is a research codebase for studying when an
 input-dependent selector can improve over fixed prediction actions in multi-label recognition.
 The repository contains the reusable Python package, experiment entry points, tests, frozen
 protocol documents, and lightweight configuration needed to reproduce the code path.
